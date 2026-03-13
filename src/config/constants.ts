@@ -1,0 +1,1 @@
+export const INTRO_EXPAND_DELAY_MS = 2000;
