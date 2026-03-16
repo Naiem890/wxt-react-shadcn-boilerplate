@@ -6,7 +6,7 @@ import path from "path";
 export default defineConfig({
   outDir: "dist",
   srcDir: "src",
-  modules: ["@wxt-dev/module-react"],
+  modules: ["@wxt-dev/module-react", "@wxt-dev/auto-icons"],
   vite: () => ({
     plugins: [tailwindcss()],
     resolve: {

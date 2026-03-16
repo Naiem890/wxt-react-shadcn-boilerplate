@@ -9,7 +9,7 @@ A production-ready browser extension boilerplate built with WXT, React 19, TypeS
 | Framework | [WXT](https://wxt.dev) v0.20 |
 | UI | React 19, TypeScript 5.9 |
 | Styling | Tailwind CSS v4, shadcn/ui, Radix UI |
-| Icons | Lucide React |
+| Icons | Lucide React, [@wxt-dev/auto-icons](https://github.com/AXeL-dev/wxt-auto-icons) |
 | Font | Inter Variable |
 | DOM Utilities | Arrive.js (MutationObserver wrapper) |
 
@@ -18,6 +18,7 @@ A production-ready browser extension boilerplate built with WXT, React 19, TypeS
 ```
 src/
 ├── assets/
+│   ├── icon.png               # Source icon — auto-icons generates all sizes from this
 │   └── tailwind.css           # Tailwind config with shadcn theme (OKLch colors, dark mode)
 ├── components/
 │   └── ui/
@@ -97,6 +98,10 @@ The boilerplate includes helpers for content script development:
 - **`sleepUntilDocumentReady(selector, timeout)`** — Wait for a specific element to appear.
 - **`getOrCreateAppRoot(container, id)`** — Create or retrieve a root div for mounting React components into the page.
 - **`attachStyle(parent, css)`** — Inject CSS into a parent element.
+
+## Extension Icons
+
+Extension icons are handled by the [`@wxt-dev/auto-icons`](https://github.com/AXeL-dev/wxt-auto-icons) module. Place a single source icon at `src/assets/icon.png` and all required sizes (16, 32, 48, 96, 128) are generated automatically during build. No need to maintain multiple icon files in `public/`.
 
 ## Important Notes
 
