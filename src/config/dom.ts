@@ -1,7 +1,11 @@
 export const SELECTOR = {
-  FACEBOOK: {
-    APP_ELEMENT: "replai-jira",
-    APP_ELEMENT_ROOT: "replai-jira-root",
-    MAIN_ANCHOR: ""
+  LINKEDIN: {
+    APP_ELEMENT: "sales-sniper",
+    get APP_ELEMENT_ROOT() {
+      return `${this.APP_ELEMENT}-root`;
+    },
+    get MAIN_ANCHOR() {
+      return `[data-id*="urn:li:activity:"]:not(:has(${this.APP_ELEMENT}))`;
+    },
   },
 };
